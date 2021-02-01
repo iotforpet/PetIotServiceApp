@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Pet Service</string>
+    <string name="email_empty">Please enter vaild email id</string>
+    <string name="email_none"></string>
+    <string name="username" translatable="false">Username</string>
+    <string name="username_empty">Please enter vaild name</string>
+    <string name="username_none"></string>
+    <string name="phone_empty">Please enter phone number</string>
+    <string name="phone_none"></string>
+    <string name="userId_empty">Please enter userID</string>
+    <string name="userId_none"></string>
+    <string name="login" translatable="false">Login</string>
+    <string name="password" translatable="false">Password</string>
+    <string name="password_empty">Please enter a valid password</string>
+    <string name="password_match">Password does not match</string>
+    <string name="password_none"></string>
+    <string name="network_online" translatable="false">Back online!</string>
+    <string name="network_offline" translatable="false">No internet connection!</string>
+    <string name="home">Home</string>
+    <string name="analysis">Analysis</string>
+    <string name="appoint">Appointment</string>
+    <string name="settings">Settings</string>
+</resources>

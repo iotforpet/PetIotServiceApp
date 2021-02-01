@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="changeUserItemViewModel"
+            type="com.gratus.petservice.viewModel.adapter.ChangeUserItemViewModel"/>
+    </data>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/grey"
+        android:layout_marginBottom="8dp"
+        android:onClick="@{() -> changeUserItemViewModel.onItemClick()}"
+        android:elevation="8dp">
+        <RelativeLayout
+            android:id="@+id/rl1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginBottom="8dp"
+            android:padding="8dp">
+            <TextView
+                android:id="@+id/numberTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:text="@{changeUserItemViewModel.user.userID}"
+                android:layout_centerVertical="true"
+                android:padding="8dp"/>
+            <ImageView
+                android:id="@+id/calendar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/circle_green_tick"
+                android:visibility="invisible"
+                android:layout_alignParentRight="true"
+                android:padding="8dp"/>
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

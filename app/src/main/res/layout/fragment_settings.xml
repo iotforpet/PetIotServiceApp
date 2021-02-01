@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="settingsViewModel"
+            type="com.gratus.petservice.viewModel.fragment.SettingsViewModel"/>
+    </data>
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        android:layout_marginBottom="60dp"
+        android:background="@color/white">
+    <RelativeLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/theme">
+            <ImageView
+                android:id="@+id/flockImg"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:src="@drawable/settings"
+                android:layout_centerHorizontal="true" />
+            <TextView
+                android:id="@+id/restTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/flockImg"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:text="Settings"/>
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/restTv"
+                android:background="@color/black"/>
+        </RelativeLayout>
+    <RelativeLayout
+        android:id="@id/editRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingBottom="2dp"
+        android:background="@drawable/relative_layout_bg">
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:background="@drawable/textview_bg"
+            android:padding="16dp"
+            android:drawableLeft="@drawable/user"
+            android:drawablePadding="16dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:text="Profile"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:background="@drawable/textview_bg"
+            android:layout_below="@+id/name"
+            android:padding="16dp"
+            android:drawableLeft="@drawable/lock"
+            android:drawablePadding="16dp"
+            android:textStyle="bold"
+            android:text="Change Password"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/device"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:background="@drawable/textview_bg"
+            android:layout_below="@+id/password"
+            android:padding="16dp"
+            android:drawableLeft="@drawable/breed"
+            android:drawablePadding="16dp"
+            android:textStyle="bold"
+            android:text="Change Device Preference"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/telegram"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:background="@drawable/textview_bg"
+            android:layout_below="@+id/device"
+            android:padding="16dp"
+            android:drawableLeft="@drawable/telegram"
+            android:drawablePadding="16dp"
+            android:textStyle="bold"
+            android:text="Telegram Preference"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/sensorFreq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:background="@drawable/textview_bg"
+            android:layout_below="@+id/telegram"
+            android:padding="16dp"
+            android:drawableLeft="@drawable/sensor"
+            android:drawablePadding="16dp"
+            android:textStyle="bold"
+            android:text="Sensor Frequency Preference"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/sensorStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:background="@drawable/textview_bg"
+            android:layout_below="@+id/sensorFreq"
+            android:padding="16dp"
+            android:drawableLeft="@drawable/sensor"
+            android:drawablePadding="16dp"
+            android:textStyle="bold"
+            android:text="Sensor Activate/Deactivate Preference"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:background="@drawable/textview_bg"
+            android:layout_below="@+id/sensorStatus"
+            android:padding="16dp"
+            android:drawableLeft="@drawable/power_black"
+            android:drawablePadding="16dp"
+            android:text="Logout"
+            android:textStyle="bold"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:textSize="16sp" />
+    </RelativeLayout>
+        <TextView
+            android:id="@+id/about"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:layout_below="@+id/editRl"
+            android:padding="16dp"
+            android:drawablePadding="16dp"
+            android:layout_marginTop="10dp"
+            android:text="About"
+            android:layout_marginLeft="23dp"
+            android:layout_marginRight="3dp"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+          <RelativeLayout
+        android:id="@id/aboutRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/about"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/relative_layout_bg">
+        <TextView
+            android:id="@+id/aboutTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:padding="16dp"
+            android:textStyle="bold"
+            android:text="Metis app -transform your phone into multifunctional service tool. You can
+check diagnostics error codes, Predictive analysis to avoid breakdown
+and book appointment @ Service-center’s. All you have to do is to Connect
+our to app to Vehicle ECU (as per instructions)"
+            android:justificationMode="inter_word"
+            android:textSize="16sp" />
+          </RelativeLayout>
+        <TextView
+            android:id="@+id/version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:layout_below="@+id/aboutRl"
+            android:padding="16dp"
+            android:drawablePadding="16dp"
+            android:layout_marginTop="10dp"
+            android:text="Version 1.0"
+            android:textAlignment="center"
+            android:layout_marginLeft="23dp"
+            android:layout_marginRight="3dp"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+    </RelativeLayout>
+    </ScrollView>
+</layout>
